@@ -1,0 +1,796 @@
+/* cyrillic-ext */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4taVIGxA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4kaVIGxA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* greek-ext */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4saVIGxA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+/* greek */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4jaVIGxA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+
+/* hebrew */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4iaVIGxA.woff2) format('woff2');
+  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+
+/* vietnamese */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4vaVIGxA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVIGxA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  src: url(https://fonts.gstatic.com/s/opensans/v26/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Open Sans';
+  /* background-color: white; */
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(220, 216, 216);
+}
+
+/* ============================= */
+
+.header-content {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 5px 15px gray;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.header-content .search-navBar i {
+  padding: 11px 5px;
+  font-size: 15px;
+display: block;
+}
+
+.search-navBar {
+  padding: 15px;
+}
+
+.header-content ul {
+  display: flex;
+}
+
+.header-content ul li {
+  padding: 15px;
+  position: relative;
+  top: 8px;
+}
+
+.header-content ul li i {
+  padding: 11px 5px;
+  font-size: 15px;
+  
+}
+
+.header-content ul li:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+.search-navBar:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+/* ===========Header=========== */
+
+.Before-Banner {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Before-Banner h1 {
+  padding: 10px 0;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+.Before-Banner p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.Before-Banner p span {
+  background-color: black;
+  color: white;
+  padding: 2px 10px;
+  letter-spacing: 0px;
+  font-weight: bold;
+}
+
+.Banner img {
+  width: 100%;
+}
+
+.Banner {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.Banner h1 {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 0 0 15px black;
+}
+
+.Banner h2 {
+  position: absolute;
+  top: -70px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.Banner button {
+  position: absolute;
+  left: 25px;
+  bottom: 300px;
+  font-size: 15px;
+  padding: 15px 20px;
+  font-weight: bold;
+  background-color: rgba(221, 215, 215, 0.667);
+  border: none;
+  transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* =========Title Heading========== */
+
+.TITLE-HEADING {
+  margin: 20px;  
+  overflow: hidden;
+
+}
+
+.TH {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.TH h1 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.TH .pp {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.TH .pp span {
+  color: rgb(163, 158, 158);
+  font-weight: normal;
+}
+
+.TH img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.TH span {
+  font-weight: bolder;
+}
+
+.content1 {
+  background-color: black;
+  color: white;
+}
+
+.content1 img {
+  width: 100%;
+}
+
+.content1 h1, p {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.content1 h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.active {
+  background-color: black !important;
+  border: none;
+  
+}
+
+.list-group-item-action {
+  display: flex;
+  position: relative;
+}
+
+.list-group-item-action img {
+  width: 50px;
+  height: 50px;
+}
+
+.con .p {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  font-weight: bold;
+}
+
+.con p {
+  position: absolute;
+  top: 30px;
+  left: 75px;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+}
+.button .bbutton{
+  padding: 5px 15px;
+  border: 1px solid gray;
+  font-size: 15px;
+  background-color: white;
+  transition: all .5s ease ;
+  -webkit-transition: all .5s ease ;
+  -moz-transition: all .5s ease ;
+  -ms-transition: all .5s ease ;
+  -o-transition: all .5s ease ;
+}
+.button .bbbutton{
+  padding: 5px 18px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 15px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+}
+.button button span{
+  padding:0 5px;
+  background-color: white;
+  color: black;
+  
+}
+.button .bbbutton:hover{
+  background-color: rgb(204, 199, 199);
+  color: black;
+  box-shadow: 1px 5px 15px black;
+
+}
+.person-George{
+  display: flex;
+  border-top: 1px solid rgb(223, 219, 219);
+  margin-top: 20px;
+  position: relative;
+  padding: 10px;
+}
+.person-George img{
+  width: 100px;
+  height: 100px;
+}
+.parent .par{
+  position: absolute;
+  top: 0;
+  left: 120px;
+  font-weight: bold;
+}
+.parent .par span{
+  font-weight: normal;
+  color: gray;
+  font-size: 13px;
+}
+.parent .par2{
+  position: absolute;
+  top: 50px;
+
+  left: 120px;
+}
+.papa{
+  margin:20px 0;
+  background-color: white;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.papa .Advertise{
+  background-color: black;
+  color: white;
+  padding:0 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.papa .AD{
+  background-color: rgb(223, 215, 215);
+  margin: 20px;
+  text-align: center;
+  padding: 80px;
+}
+.THH {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+.THH h1 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.THH .pp {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.THH .pp span {
+  color: rgb(163, 158, 158);
+  font-weight: normal;
+}
+
+.THH img {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.THH span {
+  font-weight: bolder;
+}
+.THH .align{
+  text-align: start;
+}
+.s3{
+  margin-top: 20px;
+}
+footer{
+  margin-top:10px ;
+  padding: 40px;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+}
+footer button{
+  padding: 10px 15px;
+  border: none;
+  font-size: 15px;
+}
+footer p{
+  color: white;
+  font-size: 15px;
+}
+marquee{
+  font-size: 15px;
+}
+
+
+.papa .aa {
+  text-align: start;
+  padding: 10px;
+}
+.papa .aa span{
+  background-color: rgb(207, 204, 204);
+  color: black;
+  padding: 0px 7px;
+  margin: 10px 0;
+  font-size: 12px;
+}
+.papa .aa span .fashion1{
+  background-color: black !important;
+  color: white;
+  
+}
+
+.images .Inspiration{
+background-color: black;
+position: relative;
+color: white;
+font-weight: bold;
+top: 0;
+left: 0;
+right: 0;
+padding: 5px 20px;
+margin-bottom: 0px;
+}
+.images .Inspiration h1 {
+font-size: 20px;
+font-weight: bold;
+}
+
+.images{
+  position: relative;
+  background-color: white;
+}
+.img{
+  
+  text-align: center;
+}
+.img img{
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+  padding: 10px;
+}
+.pap{
+  background-color: white;
+  margin: 20px 0;
+}
+.pap .head{
+background-color: black;
+color: white;
+}
+.pap .head h4{
+padding: 10px;
+font-size: 15px;
+font-weight: bold;
+}
+.pap .contt{
+  padding:10px 15px;
+  font-size: 20px;
+}
+.pap .contt i{
+  padding: 0 10px;
+}
+.contt input{
+  padding: 0 85px;
+  border: 1px solid black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contt button{
+  padding: 5px 157px;
+  border: none;
+  background-color: rgb(204, 197, 196);
+}
+.contt .email{
+  font-size: 14px;
+}
+/* ***************media query************** */
+@media (max-width: 1300px)  {
+
+  .Banner button{
+    padding: 10px;
+    position: relative;
+    top: -200px;
+  }
+  .contt input{
+    padding: 5px 45px;
+  }
+  .contt button{
+    padding: 5px 118px;
+  }
+  
+}
+@media (max-width: 1250px)  {
+
+  .Banner button{
+    padding: 10px;
+    position: relative;
+    top: -200px;
+  }
+  .contt input{
+    padding: 0px ;
+  }
+  .contt button{
+    padding: 5px ;
+    font-size: 15px;
+  }
+  
+}
+@media (max-width: 950px)  {
+  .Banner button{
+    padding: 10px;
+    position: relative;
+    top: -150px;
+  }
+}
+@media (max-width: 950px)  {
+  .Banner button{
+    padding: 10px;
+    position: relative;
+    top: -110px;
+  }
+  .Banner h1{
+    font-size: 45px;
+  }
+  .Banner h2{
+    font-size: 25px;
+  }
+  .contt input{
+    font-size: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .contt button{
+    padding: 5px ;
+    font-size: 15px;
+  }
+}
+@media (max-width: 760px)  {
+  .contt input{
+    font-size: 20px;
+    padding: 0 200px;
+  
+  }
+  .contt button{
+    padding: 5px 283px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 750px)  {
+  .contt input{
+    font-size: 20px;
+    padding: 0 100px;
+  
+  }
+  .contt {
+    text-align: center;
+  }
+  .contt button{
+    padding: 5px 183px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px)  {
+  .Banner button{
+    padding: 5px;
+    font-size: 10px;
+    position: relative;
+    top: -140px;
+  }
+  .Banner h1{
+    font-size: 25px;
+  }
+  .Banner h2{
+    font-size: 15px;
+    font-size: 15px;
+    position: relative;
+    top: -170px;
+  }
+  .contt input{
+    font-size: 20px;
+    padding: 0 0px;
+  
+  }
+  .contt {
+    text-align: center;
+  }
+  .contt button{
+    padding: 5px 83px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px)  {
+  .Banner button{
+    padding: 5px;
+    font-size: 10px;
+    position: relative;
+    top: -125px;
+  }
+  .Banner h1{
+    font-size: 20px;
+  }
+  .Banner h2{
+    font-size: 15px;
+    font-size: 15px;
+    position: relative;
+    top: -140px;
+  }
+}
+@media (max-width: 450px)  {
+  .Banner button{
+    padding: 5px;
+    font-size: 10px;
+    position: relative;
+    top: -110px;
+  }
+  .Banner h1{
+    font-size: 20px;
+  }
+  .Banner h2{
+    font-size: 15px;
+    position: relative;
+    top: -120px;
+  }
+}
+/* CODPEN PRELOAD */
+
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),10%,90%);
+	--fg: hsl(var(--hue),10%,10%);
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	/* display: grid; */
+	place-items: center;
+}
+.preloader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  overflow: hidden;
+
+}
+
+.pl {
+	display: block;
+	width: 6.25em;
+	height: 6.25em;
+}
+.pl__ring, .pl__ball {
+	animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+	animation-name: ball;
+}
+
+/* Dark theme  */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: hsl(var(--hue),10%,10%);
+		--fg: hsl(var(--hue),10%,90%);
+	}
+}
+
+/* Animation */
+@keyframes ring {
+	from {
+		stroke-dasharray: 0 257 0 0 1 0 0 258;
+	}
+	25% {
+		stroke-dasharray: 0 0 0 0 257 0 258 0;
+	}
+	50%, to {
+		stroke-dasharray: 0 0 0 0 0 515 0 0;
+	}
+}
+@keyframes ball {
+	from, 50% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: 1;
+	}
+	64% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -109;
+	}
+	78% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -145;
+	}
+	92% {
+		animation-timing-function: ease-in;
+		stroke-dashoffset: -157;
+	}
+	57%, 71%, 85%, 99%, to {
+		animation-timing-function: ease-out;
+		stroke-dashoffset: -163;
+	}
+}
